@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InterCredito - Empréstimos Rápidos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(255, 102, 0, 0.9);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff6600;
+      color: #000;
+    }
+
+    .container h2 {
+      color: #ff6600;
+    }
+
+    .about, .testimonials {
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+
+    .testimonial {
+      margin-top: 15px;
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-left: 4px solid #ff6600;
+      border-radius: 5px;
+    }
+
+    .testimonial p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .security img {
+      width: 100px;
+      margin-right: 15px;
+    }
+
+    .security {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #000;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InterCredito</h1>
+    <p>Empréstimos rápidos, simples e seguros</p>
+  </header>
+
+  <div class="container">
+    <h2>Quem Somos</h2>
+    <div class="about">
+      <p>Na <strong>InterCredito</strong>, acreditamos que conquistar seus objetivos é possível quando se tem o apoio certo. Com anos de experiência no mercado financeiro, oferecemos soluções de empréstimo com transparência, agilidade e total segurança.</p>
+      <p>Nosso compromisso é com você: analisamos cada perfil com atenção, buscando sempre a melhor condição para transformar seus planos em realidade.</p>
+      <p>Seja para quitar dívidas, investir no seu negócio ou realizar um sonho, conte com a InterCredito. Confiabilidade, credibilidade e um atendimento humano que faz a diferença.</p>
+    </div>
+
+    <h2>O que dizem nossos clientes</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“Consegui o empréstimo que precisava com rapidez e sem complicações. A equipe foi super atenciosa!”</p>
+        <span>— Ana Gomes</span>     
+      </div>
+      <div class="testimonial">
+        <p>“InterCredito me ajudou a sair do aperto e reorganizar minha vida financeira. Recomendo com confiança!”</p>
+        <span>— João Mendes</span>
+      </div>
+      <div class="testimonial">
+        <p>“Excelente atendimento e total transparência. Finalmente encontrei uma empresa que transmite segurança.”</p>
+        <span>— Carla Santos</span>
+      </div>
+    </div>
+
+    <h2>Solicite seu Empréstimo</h2>
+    <form action="https://formsubmit.co/creditointer310@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://intercredito.com.br/obrigado.html">
+
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required pattern="\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}" placeholder="(11) 91234-5678" />
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" />
+
+      <label for="renda">Renda Mensal</label>
+      <input type="number" id="renda" name="renda" required />
+
+      <label for="valor">Valor desejado</label>
+      <input type="number" id="valor" name="valor" required />
+
+      <label for="motivo">Motivo do Empréstimo</label>
+      <textarea id="motivo" name="motivo" rows="3" required></textarea>
+
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="security">
+      <img src="https://img.icons8.com/color/96/000000/ssl.png" alt="Conexão Segura SSL" />
+      <img src="https://img.icons8.com/color/96/000000/privacy-policy.png" alt="Política de Privacidade" />
+      <img src="https://img.icons8.com/color/96/000000/verified-account.png" alt="Empresa Verificada" />
+    </div>
+    <p>&copy; 2025 InterCredito. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
